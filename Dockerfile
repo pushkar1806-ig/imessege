@@ -12,7 +12,7 @@ ENV VITE_CLERK_PUBLISHABLE_KEY=$VITE_CLERK_PUBLISHABLE_KEY
 RUN npm run build
 
 # --- Stage 2: build the API bundle ---
-FROM node:22-bookworm-slim AS bacFkend-build
+FROM node:22-bookworm-slim AS backend-build
 WORKDIR /app/backend
 
 COPY backend/package.json backend/package-lock.json ./
