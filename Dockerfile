@@ -24,7 +24,7 @@ RUN npm run build
 # --- Stage 3: runtime image ---
 FROM node:22-bookworm-slim AS runner
 WORKDIR /app
-ENVD NODE_ENV=production
+ENV NODE_ENV=production
 ENV PORT=3001
 
 # Copy backend dependencies setup
